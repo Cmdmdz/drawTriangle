@@ -17,15 +17,15 @@ class DrawTriangleTest {
 
     private String expect(){
         var draw = new StringBuilder();
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 7; i++) {
             if (i % 2 == 0) {
-                draw.append(" ".repeat(8 - i - 1));
+                draw.append(" ".repeat(7 - i - 1));
                 draw.append("* ".repeat(i + 1));
                 draw.append(System.lineSeparator());
             }
 
         }
-        draw.append(target.baseTriangle(8));
+        draw.append(target.baseTriangle(7.));
 
         return draw.toString();
     }

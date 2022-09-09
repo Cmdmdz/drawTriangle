@@ -6,16 +6,9 @@ public class DrawTriangle {
 
     public String triangle(double size) {
         StringBuilder draw = new StringBuilder();
+        var n = 2*(size-1)-1;
 
-        var n = 0;
-        for (int k = 0; k <= size; k++) {
-            if (k > 4) {
-                n = k + 3;
-            } else {
-                n = k + 1;
-            }
-        }
-        for (var i = 0; i < n; i++) {
+        for (var i = 0.; i < n; i++) {
 
             draw(draw,i, n - i);
 
@@ -24,7 +17,7 @@ public class DrawTriangle {
         return draw.toString();
     }
 
-    private void draw(StringBuilder draw, double i, double x) {
+    private void draw(StringBuilder draw, Double i, Double x) {
 
         if (i % 2 == 0) {
             for (var j = x; j > 1; j--) {
@@ -38,9 +31,9 @@ public class DrawTriangle {
         }
     }
 
-    public  String baseTriangle(double size) {
+    public  String baseTriangle(Double size) {
         StringBuilder draw = new StringBuilder();
-        for (var i = 0; i < size; i++) {
+        for (var i = 0.; i < size; i++) {
             if (i == 3) {
                 break;
             }
